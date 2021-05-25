@@ -1,7 +1,10 @@
 /* Start Variables */
-/* :root {
-  
-} */
+:root {
+  --CTA-text: hsl(356, 100%, 66%);
+  --CTA-hover: hsl(355, 100%, 74%);
+  --headings: hsl(208, 49%, 24%);
+  --mainTransitionDuration: .3s;
+}
 /* End Variables */
 /* Start Global Rules */
 * {
@@ -12,10 +15,26 @@
 html {
   scroll-behavior: smooth;
 }
-/* body {
-  font-family: 'Overpass', sans-serif;
+body {
   font-family: 'Ubuntu', sans-serif;
-} */
+  /* font-family: 'Overpass', sans-serif; */
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--headings);
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -44,3 +63,110 @@ html {
 /* Start Global Components */
 
 /* End Global Components */
+/* Start Header */
+header {
+  background-color: #ccc;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+header .container {
+  display: flex;
+  align-items: center;
+}
+header .container .logo {
+  width: 80px;
+}
+header .container .logo img {
+  width: 100%;
+}
+header .container nav {
+  flex: 2.2;
+}
+header .container nav ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+header .container nav ul li {
+  margin-left: 30px;
+}
+header .container nav ul li:last-child {
+  position: relative;
+}
+header .container nav ul li:last-child .drop-down-menu {
+  width: 150px;
+  padding: 20px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  top: 100%;
+  left: -10px;
+}
+header .container nav ul li:last-child .drop-down-menu ul {
+  flex-direction: column;
+  margin: 0;
+}
+header .container nav ul li:last-child .drop-down-menu ul li {
+  margin: 0;
+}
+header .container nav ul li:last-child .drop-down-menu ul li a {
+  color: black;
+}
+header .container nav ul li:last-child .drop-down-menu ul li a:hover {
+  text-decoration: none;
+  font-weight: 700;
+}
+header .container nav ul li:last-child:hover .drop-down-menu {
+  display: block;
+}
+header .container nav ul li a {
+  position: relative;
+}
+header .container nav ul li a::after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 7px;
+  top: 48%;
+  transform: translateY(-50%);
+  right: -15px;
+  background-image: url(../images/icon-arrow-light.svg);
+  background-repeat: no-repeat;
+}
+header .container nav ul li a:hover {
+  text-decoration: underline;
+}
+header .container .login {
+  flex: 0.8;
+}
+header .container .login ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header .container .login ul li {
+  margin-left: 30px;
+}
+header .container .login ul li a:hover {
+  text-decoration: underline;
+}
+header .container .login ul li:last-child a {
+  background-color: white;
+  color: var(--CTA-text);
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 10px 25px;
+  transition-duration: var(--mainTransitionDuration);
+}
+header .container .login ul li:last-child a:hover {
+  background-color: var(--CTA-hover);
+  color: white;
+  text-decoration: none;
+}
+/* End Header */
