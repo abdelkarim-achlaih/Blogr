@@ -81,11 +81,13 @@ header .container {
 }
 header .container .logo {
   width: 80px;
+  order: 1;
 }
 header .container .logo img {
   width: 100%;
 }
 header .container nav {
+  order: 2;
   flex: 2.2;
 }
 header .container nav ul {
@@ -108,6 +110,7 @@ header .container nav ul li:last-child .drop-down-menu {
   border-radius: 5px;
   top: 100%;
   left: -10px;
+  z-index: 100;
 }
 header .container nav ul li:last-child .drop-down-menu ul {
   flex-direction: column;
@@ -144,6 +147,7 @@ header .container nav ul li a:hover {
   text-decoration: underline;
 }
 header .container .login {
+  order: 3;
   flex: 0.8;
 }
 header .container .login ul {
@@ -168,5 +172,75 @@ header .container .login ul li:last-child a:hover {
   background-color: var(--CTA-hover);
   color: white;
   text-decoration: none;
+}
+header .container .bars {
+  display: none;
+  order: 4;
+}
+header .container .bars i {
+  color: white;
+  font-size: 30px;
+}
+@media (max-width: 991px) {
+  header .container .login {
+    flex: 1.2;
+  }
+}
+@media (max-width: 767px) {
+  header .container {
+    position: relative;
+  }
+  header .container nav ul li:last-child .drop-down-menu {
+    width: 140px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    top: 100%;
+    left: -41.095px;
+    z-index: 100;
+    padding: 0;
+  }
+  header .container nav ul li:last-child .drop-down-menu ul {
+    padding: 9px 0;
+  }
+  header .container nav,
+  header .container .login {
+    top: calc(100% + 20px);
+    width: 150px;
+    position: absolute;
+    right: 50px;
+    background-color: #ccc;
+  }
+  header .container .login {
+    top: calc(100% + 151px);
+  }
+  header .container nav ul,
+  header .container .login ul {
+    padding: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  header .container nav ul li,
+  header .container .login ul li {
+    margin: 0;
+  }
+  header .container nav li a {
+    margin: 0;
+  }
+  header .container nav,
+  header .container .login {
+    display: none;
+  }
+  header .container .bars {
+    display: block;
+    margin-left: auto;
+  }
+  header .container .bars:hover + nav,
+  header .container .bars:hover + .login {
+    display: block;
+  }
 }
 /* End Header */
