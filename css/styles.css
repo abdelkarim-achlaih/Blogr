@@ -218,10 +218,10 @@ header .container .bars i {
 /* Start Landing Section */
 .landing {
   padding-top: 130px;
+  padding-bottom: 50px;
   background-image: linear-gradient(to right, hsl(13, 100%, 72%),65%,  hsl(353, 100%, 62%));
   position: relative;
   overflow: hidden;
-  height: 80vh;
   font-family: 'Overpass', sans-serif;
   color: white;
   border-bottom-left-radius: 100px;
