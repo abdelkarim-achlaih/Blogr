@@ -3,7 +3,7 @@
   --CTA-text: hsl(356, 100%, 66%);
   --CTA-hover: hsl(355, 100%, 74%);
   --headings: hsl(208, 49%, 24%);
-  --mainTransitionDuration: .3s;
+  --mainTransitionDuration: 0.3s;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -16,9 +16,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--headings);
 }
 ul {
@@ -33,7 +38,7 @@ a {
   font-size: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 .container {
   padding-left: 15px;
@@ -133,7 +138,7 @@ header .container nav ul li a {
 }
 header .container nav ul li a::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 10px;
   height: 7px;
   top: 48%;
@@ -219,10 +224,15 @@ header .container .bars i {
 .landing {
   padding-top: 130px;
   padding-bottom: 50px;
-  background-image: linear-gradient(to right, hsl(13, 100%, 72%),65%,  hsl(353, 100%, 62%));
+  background-image: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    65%,
+    hsl(353, 100%, 62%)
+  );
   position: relative;
   overflow: hidden;
-  font-family: 'Overpass', sans-serif;
+  font-family: "Overpass", sans-serif;
   color: white;
   border-bottom-left-radius: 100px;
 }
@@ -240,12 +250,12 @@ header .container .bars i {
 }
 @media (max-width: 991px) {
   .landing .overlay {
-      top: -550px;
+    top: -550px;
   }
 }
 @media (max-width: 767px) {
   .landing .overlay {
-      top: -400px;
+    top: -400px;
   }
   .landing .overlay img {
     max-width: 513%;
@@ -307,3 +317,73 @@ header .container .bars i {
   }
 }
 /* End Landing Section */
+/* Start Intro Section */
+.intro {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  font-family: "Overpass", sans-serif;
+}
+.intro .content {
+  position: relative;
+  overflow: hidden;
+}
+.intro .content h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.intro .content .image {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+.intro .content .image img {
+  width: 100%;
+}
+.intro .content .image .desktop {
+  display: none;
+}
+.intro .content .text {
+  width: 80%;
+  margin: 10% auto auto;
+  text-align: center;
+}
+.intro .content .text .exp:first-child {
+  margin-bottom: 60px;
+}
+.intro .content .text .exp h3 {
+  font-weight: 700;
+  font-size: 27px;
+}
+.intro .content .text .exp p {
+  color: hsl(207, 13%, 34%);
+  line-height: 1.8;
+}
+@media (min-width: 768px) {
+  .intro .content .image {
+    width: 700px;
+    position: absolute;
+    top: 0;
+    right: -230px;
+  }
+  .intro .content .image .desktop {
+    display: block;
+  }
+  .intro .content .image .mobile {
+    display: none;
+  }
+  .intro .content .text {
+    text-align: left;
+    margin-left: 40px;
+    width: 38%;
+  }
+}
+@media (min-width: 992px) {
+  .intro .content {
+    padding-bottom: 110px;
+  }
+  .intro .content .text {
+    margin-left: 130px;
+    width: 40%;
+  }
+}
+/* End Intro Section */
