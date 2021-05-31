@@ -451,6 +451,10 @@ header .container .bars i {
   .bg {
     height: 350px;
   }
+  .bg .bg-img {
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
+  }
   .bg .content .image {
     margin-left: 10px;
   }
