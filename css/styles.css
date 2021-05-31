@@ -387,3 +387,113 @@ header .container .bars i {
   }
 }
 /* End Intro Section */
+/* Start bg Section */
+.bg {
+  background-color: hsl(238, 21%, 28%);
+  color: white;
+  font-family: "Overpass", sans-serif;
+  position: relative;
+  height: 300px;
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+.bg .bg-img {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.bg .bg-img::after {
+  position: absolute;
+  content: url(../images/bg-pattern-circles.svg);
+  top: -600px;
+  left: -260px;
+  z-index: 1;
+}
+.bg .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.bg .content .image {
+  position: relative;
+  width: 50%;
+  height: 380px;
+  z-index: 2;
+  overflow: visible;
+  margin-left: 100px;
+}
+.bg .content .image img {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 400px;
+}
+.bg .content .text {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  margin-top: -80px;
+  margin-left: -80px;
+}
+.bg .content .text h2 {
+  color: white;
+  font-size: 35px;
+}
+.bg .content .text p {
+  line-height: 1.8;
+  font-size: 15px;
+  width: 75%;
+}
+@media (max-width: 991px) {
+  .bg {
+    height: 350px;
+  }
+  .bg .content .image {
+    margin-left: 10px;
+  }
+  .bg .content .text {
+    margin-left: 80px;
+    margin-top: -25px;
+  }
+}
+@media (max-width: 767px) {
+  .bg {
+    height: 540px;
+    margin-top: 140px;
+  }
+  .bg .bg-img {
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
+  }
+  .bg .bg-img::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bg .content {
+    flex-direction: column;
+  }
+  .bg .content .image {
+    margin: auto;
+    width: fit-content;
+    width: 100%;
+  }
+  .bg .content .image img {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    top: -160px;
+  }
+  .bg .content .text {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    margin-top: -160px;
+  }
+  .bg .content .text p {
+    width: 100%;
+  }
+}
+/* End bg Section */
