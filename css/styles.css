@@ -392,22 +392,113 @@ header .container .bars i {
   }
 }
 /* End Intro Section */
-
+/* Start bg Section */
+.bg {
+}
+.bg .mobile-img {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  margin: auto;
+}
+.bg .mobile-img img {
+  width: 100%;
+}
+.bg .main-bg {
+  background-image: linear-gradient(
+    to right,
+    hsl(237, 23%, 32%),
+    50%,
+    hsl(237, 17%, 21%)
+  );
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 80px;
+  padding: 200px 50px 50px;
+  top: -220px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  overflow: hidden;
+}
+.bg .main-bg::after {
+  position: absolute;
+  content: url(../images/bg-pattern-circles.svg);
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.58) translateX(-85%);
+  z-index: -1;
+}
+.bg .main-bg .main-text {
+  width: 100%;
+}
+.bg .main-bg h2 {
+  font-size: 30px;
+  color: white;
+  width: 95%;
+  margin: 30px auto;
+}
+.bg .main-bg p {
+  color: white;
+  width: 95%;
+  margin: 25px auto;
+  line-height: 1.8;
+}
+@media (min-width: 768px) {
+  .bg .main-bg {
+    padding: 50px;
+    top: -300px;
+    text-align: left;
+  }
+  .bg .main-bg::after {
+    transform: scale(0.7) translateX(-41%) translateY(-52%);
+  }
+  .bg .main-bg .main-text {
+    width: 50%;
+    margin-left: 50%;
+  }
+  .bg .mobile-img {
+    width: 50%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .bg {
+    margin-top: -150px;
+  }
+  .bg .main-bg {
+    top: -450px;
+  }
+  .bg .main-bg::after {
+    transform: scale(0.9) translateX(-29%) translateY(-108%);
+  }
+}
+/* End bg Section */
 /* Start Features Section */
 .features {
+  margin-top: -250px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .features .content {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
+  .features {
+    margin-top: -300px;
+  }
   .content .text.right {
     text-align: left;
     margin-left: 50%;
     margin-top: -5px;
     width: 38%;
+  }
+}
+@media (min-width: 992px) {
+  .features {
+    margin-top: -400px;
   }
 }
 /* End Features Section */
@@ -438,6 +529,9 @@ footer .container .footer-section h4 {
 }
 footer .container .footer-section ul li a {
   color: hsl(240, 2%, 79%);
+}
+footer .container .footer-section ul li a:hover {
+  text-decoration: underline;
 }
 @media (max-width: 991px) {
   footer .container .footer-section {
